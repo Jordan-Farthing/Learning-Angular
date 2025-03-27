@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './model/course';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 @Component({
     selector: 'app-root',
@@ -18,8 +19,11 @@ export class AppComponent {
     rate = 0.67;
     course = COURSES[0];
 
+    @ViewChild(CourseCardComponent)
+    card: CourseCardComponent;
+
     onCourseSelected(course:Course){
-        console.log("App component - click event bubbled...", course);
+        console.log(this.card);
     }
 
 }

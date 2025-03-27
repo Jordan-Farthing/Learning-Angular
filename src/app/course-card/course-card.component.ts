@@ -14,7 +14,7 @@ export class CourseCardComponent {
   })
   course:Course;
 
-  @Input({required:true})
+  @Input()
   cardIndex:number;
 
   @Output('courseSelected')

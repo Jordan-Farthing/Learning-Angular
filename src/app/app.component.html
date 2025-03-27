@@ -5,6 +5,18 @@
 
 </div>
 
+<div class="demo">
+    <div>Start Date: {{startDate | date: 'MMM/dd/yyyy'}}</div>
+    <div>{{title | uppercase}}</div>
+    <div>{{price | number: '3.3-5'}}</div>
+    <div>{{price | currency: 'EUR'}}</div>
+    <div>Percentage: {{rate | percent}}</div>
+</div>
+
+{{courses | json}}
+
+
+
 <div>
     <div class="courses">
 
@@ -20,5 +32,6 @@
     </div>
 </div>
 
-
-
+<div *ngFor="let pair of course | keyvalue">
+    {{pair.key + ': ' + pair.value}}
+</div>

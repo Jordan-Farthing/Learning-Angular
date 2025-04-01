@@ -4,7 +4,7 @@
        {{ cardIndex || '' + ' ' + course.description }}
     </div>
 
-    <img width="300" alt="Angular Logo" [src]="course.iconUrl">
+    <img #courseImage width="300" alt="Angular Logo" [src]="course.iconUrl">
 
     <div class="course-description">
         {{course.longDescription}}

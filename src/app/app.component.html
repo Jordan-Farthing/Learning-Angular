@@ -8,25 +8,12 @@
 
     <course-card (courseSelected)="onCourseSelected($event)" [course]="course">
 
-        <div class="course-image">
-            <img width="300" alt="Angular Logo" [src]="course.iconUrl"/>
-
-            <h5>total Lessions: 5</h5>
-        </div>
+        <course-image [src]="course.iconUrl"></course-image>
 
         <div class="course-description">
             {{course.longDescription}}
         </div>
 
-        Edit Description: <textarea></textarea>
-
-    </course-card>
-
-    <course-card (courseSelected)="onCourseSelected($event)" [course]="courses[1]">
-
-        <img width="300" alt="Angular Logo" [src]="course.iconUrl"/>
-
-        <h5>total Lessions: 10</h5>
     </course-card>
 
 </div>

@@ -21,7 +21,6 @@ export class AppComponent implements AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        console.log(this.cards);
     }
 
     onCoursesEdited(){

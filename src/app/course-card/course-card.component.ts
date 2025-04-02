@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, ContentChild, ContentChildren, ElementRef, EventEmitter, Input, Output, QueryList, ViewChild } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ContentChild, ContentChildren, ElementRef, EventEmitter, Input, Output, QueryList, TemplateRef, ViewChild } from '@angular/core';
 import { Course } from '../model/course';
 import { CommonModule } from '@angular/common';
 import { CourseImageComponent } from '../course-image/course-image.component';
@@ -15,6 +15,9 @@ export class CourseCardComponent implements AfterViewInit, AfterContentInit {
     required: true
   })
   course:Course;
+
+  @Input()
+  noImageTpl: TemplateRef<any>;
 
   @Input()
   cardIndex:number;
